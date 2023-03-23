@@ -28,13 +28,16 @@ namespace ProductReviewManagement
             while (flag)
             {
                 Console.WriteLine("Please Select options");
-                Console.WriteLine("1.Display all data \n22.Exit");
+                Console.WriteLine("1.Display all data \n2.Retrive Top 3 Records \n22.Exit");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
                 {
                     case 1:
                         Console.WriteLine("Displaying all the data");
                         DisplayProductReviews(list);
+                        break;
+                    case 2:
+                        ProductManagement.RetriveTopRecords(list);
                         break;
                     case 22:
                         flag= false;
