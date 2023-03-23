@@ -29,7 +29,7 @@ namespace ProductReviewManagement
             while (flag)
             {
                 Console.WriteLine("Please Select options");
-                Console.WriteLine("1.Display all data \n2.Retrive Top 3 Records \n3.Fetch Records based on Rating and ProductId  \n4.Count of each product review \n22.Exit");
+                Console.WriteLine("1.Display all data \n2.Retrive Top 3 Records \n3.Fetch Records based on Rating and ProductId  \n4.Count of each product review \n5.Fetch only ProductId and Review \n22.Exit");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
                 {
@@ -45,6 +45,9 @@ namespace ProductReviewManagement
                         break;
                     case 4:
                         ProductManagement.FindingEachCountOfProductId(list);
+                        break;
+                    case 5:
+                        ProductManagement.DisplayProductIdAndReview(list); 
                         break;
                     case 22:
                         flag= false;
