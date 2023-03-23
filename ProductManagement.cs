@@ -40,5 +40,10 @@ namespace ProductReviewManagement
             }
 
         }
+        public static void SkipTop5Records(List<ProductReview> list)
+        {
+            List<ProductReview> result = list.Skip(5).ToList();
+            Program.DisplayProductReviews(result);
+        }
     }
 }
