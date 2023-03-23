@@ -18,5 +18,10 @@ namespace ProductReviewManagement
             List<ProductReview> topResults = (from product in list orderby product.Rating descending select product).Take(3).ToList();
             Program.DisplayProductReviews(topResults);
         }
+        public static void FetchRecordsBasedOnRatingAndProductId(List<ProductReview> list)
+        {
+            List<ProductReview> result = list.Where(p => p.Rating > 3 && (p.ProductId == 1 || p.ProductId == 4 || p.ProductId == 9)).ToList();
+            Program.DisplayProductReviews(result);
+        }
     }
 }
